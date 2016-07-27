@@ -1,43 +1,121 @@
 <html>
 
 <head>
+
+<style>
+	.features-sections{
+		padding:2% !important;
+	}
+	
+	.header-sections{
+		padding-left:1.7% !important;
+		padding-top:2% !important;
+	}
+	
+	.checkbox-option{
+		width: 130px;
+    padding-bottom: 1%;
+	}
+</style>
+
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
+<script src="js/widget.js"></script>
 
-<script>
+<script> 
 
 $(function () {
     $('.accordion').accordion();
 });
 
 </script>
+
 </head>
 
 <body>
 
-<div class="ui styled accordion">
-  <div class="active title">
-    <i class="dropdown icon"></i>
-    First Activity
+<!-- Header title of widget -->
+
+<div>
+	<h1 class="ui header header-sections">Need Help Finding a home? Tell us what you need:</h1>
+</div>
+
+<div class="ui two column grid">
+
+	<!-- Main activities of widget -->
+	
+	<div class="ten wide column features-sections">
+		<div class="ui styled accordion fluid accordion" id="activities-section-level-0">
+			
+			<!-- 
+				Activities dynamically added through javascript
+			-->
+				
+		</div>
+	</div>
+	
+	<div class="ui vertical divider" style=" margin-left: 63.8%; height: 21.5%; margin-top: -10.1%;">
+    And
   </div>
-  <div class="active content">
-    <p>First Activity.</p>
-  </div>
-  <div class="title">
-    <i class="dropdown icon"></i>
-    Second Activity
-  </div>
-  <div class="content">
-    <p>Second Activity</p>
-  </div>
-  <div class="title">
-    <i class="dropdown icon"></i>
-    Third Activity
-  </div>
-  <div class="content">
-    <p>Third Activity</p>
-  </div>
+	
+	<!-- Form Factor, Area range, Price range section of widget -->
+	
+	<div class="six wide column features-sections">
+		
+		<!-- Form Factor Section -->
+		
+		<div>
+			
+			<h3 class="ui header header-sections">Form Factor:</h3>
+		
+			<div class="ui toggle checkbox checked checkbox-option">
+				<input type="checkbox" name="public">
+				<label>Buy</label>
+			</div>
+			
+			<div class="ui toggle checkbox checkbox-option">
+				<input type="checkbox" name="public">
+				<label>Rent</label>
+			</div>
+		</div>
+		
+		
+		<div class="ui divider"></div>
+		
+		
+		<!-- Price Range Section -->
+		
+		<div>
+			<h3 class="ui header header-sections">Price Ranges (In Lakhs and Crores):</h3>
+			
+			<div id="price-range-section">
+				
+				<!-- 
+					Price Range Options dynamically added through javascript
+				-->
+				
+			</div>
+		</div>
+		
+		<div class="ui divider"></div>
+		
+		<div>
+			<h3 class="ui header header-sections">Area Ranges (In Acres):</h3>
+			
+			<div id="area-range-section">
+				
+				<!-- 
+					Area Range Options dynamically added through javascript
+				-->
+				
+			</div>
+		</div>
+		
+		<div class="ui divider"></div>
+		
+		
+	</div>
 </div>
 
 </body>
